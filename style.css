@@ -159,7 +159,7 @@ span{
     display: none;
 }
 header.sticky{
-    padding: 8px 14%;
+    padding: 8px 12%;
     background: var(--bg-color);
 }
 /* Header css ends */
@@ -176,7 +176,7 @@ section{
     background-size: cover;
     background-position: center;
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: flex-start;
 }
 .home-content h5{
@@ -233,3 +233,80 @@ section{
     color: var(--text-color);
 }
 /* Home section ends */
+
+/* Responsive code */
+
+@media(max-width: 1700px){
+    header{
+        /* padding: 18px 8%; */
+    }
+}
+@media(max-width: 1200px){
+    header{
+        padding: 18px 8%;
+    }
+    header.sticky{
+        padding: 18px 8%;
+    }
+    .navbar a{
+        margin: 12px 20px;
+    }
+}
+@media(max-width: 992px){
+    section{
+        padding: 18px 8%;
+    }
+    #menu-icon{
+        display: block;
+    }
+    .navbar{
+        position: absolute;
+        width: 100%;
+        height: 350px;
+        padding: 40px 60px;
+        margin-top: 60px;
+        top: 0;
+        bottom: 0;
+        left: 100%;
+        right: 0;
+        display: flex;
+        flex-direction: column;
+        background: var(--bg-color);
+        transition: all .50s ease;
+    }
+    .navbar a{
+        display: block;
+        padding: 0;
+        margin: 0px 0px 20px 0px;
+        font-size: 0.9375rem;
+        font-weight: 400;
+    }
+    .navbar.open{
+        left: 0;
+    }
+}
+@media(max-width: 767px){
+    .home-content h1{
+        font-size: 35px;
+    }
+    .home-content h5{
+        font-size: 16px;
+    }
+    .home-content p{
+        line-height: 25px;
+    }
+    #menu-icon{
+        font-size: 25px;
+    }
+    .h-right a{
+        margin-right: 12px;
+        margin-left: 0;
+    }
+    .home-content button{
+        padding: 10px 20px;
+        font-size: 15px;
+    }
+}
+@media(max-width: 576px){
+
+}
