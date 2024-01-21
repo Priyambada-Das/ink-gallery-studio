@@ -202,7 +202,7 @@ section{
 }
 @keyframes back{
     100%{
-        /* background-position: 2000px 0; */
+        background-position: 2000px 0;
     }
 }
 .home-content p{
