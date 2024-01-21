@@ -1,4 +1,4 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
@@ -10,7 +10,8 @@
     outline: none;
     scroll-behavior: smooth;
 }
-:root{
+
+:root {
     --text-color: #fff;
     --bg-color: #000;
     --main-color: #b15e05;
@@ -19,13 +20,15 @@
     --h2-font: 2rem;
     --p-font: 0.9375rem;
 }
-body{
+
+body {
     height: 100%;
     width: 100%;
     background-color: var(--bg-color);
 }
+
 /* Header css starts */
-header{
+header {
     position: fixed;
     top: 0;
     right: 0;
@@ -38,7 +41,8 @@ header{
     background: transparent;
     transition: all .50s ease;
 }
-.logo{
+
+.logo {
     font-size: 20px;
     color: var(--text-color);
     font-weight: 700;
@@ -47,25 +51,33 @@ header{
     align-items: center;
     gap: 2px;
 }
-.logo:hover{
+
+.logo:hover {
     color: var(--text-color);
 }
+
 .logo-circle {
     display: inline-flex;
     align-items: center;
     justify-content: center;
     position: relative;
-    width: 30px; /* Adjust the circle size */
-    height: 30px; /* Adjust the circle size */
+    width: 30px;
+    /* Adjust the circle size */
+    height: 30px;
+    /* Adjust the circle size */
     border-radius: 50%;
-    background-color: #fffff0; /* Set your desired circle background color */
-    color: #000; /* Set your desired text color inside the circle */
-    margin-right: 5px; /* Adjust spacing between the circle and "Studio" */
+    background-color: #fffff0;
+    /* Set your desired circle background color */
+    color: #000;
+    /* Set your desired text color inside the circle */
+    margin-right: 5px;
+    /* Adjust spacing between the circle and "Studio" */
     overflow: hidden;
 }
 
 .logo-text {
-    opacity: 1; /* Initially visible */
+    opacity: 1;
+    /* Initially visible */
     transition: opacity 0.5s ease;
     font-family: "Open Sans", sans-serif;
 }
@@ -84,14 +96,18 @@ header{
 }
 
 @keyframes waveEffect {
-    0%, 100% {
+
+    0%,
+    100% {
         transform: scaleY(0);
     }
+
     50% {
         transform: scaleY(1);
     }
 }
-span{
+
+span {
     color: var(--main-color);
     text-decoration: none;
     font-size: 16px;
@@ -100,12 +116,14 @@ span{
     letter-spacing: 1px;
 
 }
-.navbar{
+
+.navbar {
     display: flex;
     margin-bottom: 0;
     padding-left: 0;
 }
-.navbar a{
+
+.navbar a {
     color: var(--text-color);
     font-size: var(--p-font);
     font-weight: 400;
@@ -114,10 +132,11 @@ span{
     text-decoration: none;
     text-transform: uppercase;
     font-family: "Oswald", sans-serif;
-    letter-spacing: 2px; 
-    position: relative; 
+    letter-spacing: 2px;
+    position: relative;
 }
-.navbar a::after{
+
+.navbar a::after {
     content: "";
     width: 0;
     height: 3px;
@@ -128,17 +147,21 @@ span{
     background: var(--main-color);
     transition: width 0.3s;
 }
-.navbar a:hover::after{
+
+.navbar a:hover::after {
     width: 50%;
 }
-.navbar a:hover{
+
+.navbar a:hover {
     color: var(--main-color);
 }
-.h-right{
+
+.h-right {
     display: flex;
     align-items: center;
 }
-.h-right a{
+
+.h-right a {
     vertical-align: middle;
     font-size: 20px;
     color: var(--text-color);
@@ -147,39 +170,45 @@ span{
     margin-left: 5px;
     transition: all .50s ease;
 }
-.h-right a:hover{
+
+.h-right a:hover {
     color: var(--main-color);
     transform: translateY(-3px);
 }
-#menu-icon{
+
+#menu-icon {
     color: var(--text-color);
     font-size: 30px;
     cursor: pointer;
     z-index: 10001;
     display: none;
 }
-header.sticky{
+
+header.sticky {
     padding: 8px 12%;
     background: var(--bg-color);
 }
+
 /* Header css ends */
 
 /* Home section starts */
-section{
+section {
     padding: 70px 12% 60px;
 }
-.home-section{
+
+.home-section {
     position: relative;
     height: 100vh;
     width: 100%;
-    background-image: linear-gradient(to Left, rgba(0,0,0,0.6),rgba(0,0,0,0.3)),url(./assets/images/banner.jpg);
+    background-image: linear-gradient(to Left, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3)), url(./assets/images/banner.jpg);
     background-size: cover;
     background-position: center;
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
 }
-.home-content h5{
+
+.home-content h5 {
     font-size: 18px;
     font-weight: 600;
     margin-bottom: 10px;
@@ -187,7 +216,8 @@ section{
     letter-spacing: 6px;
     color: #fff;
 }
-.home-content h1{
+
+.home-content h1 {
     font-size: var(--h1-font);
     font-weight: 800;
     line-height: 1.2;
@@ -200,19 +230,23 @@ section{
     background-position: 0 0;
     animation: back 20s linear infinite;
 }
-@keyframes back{
-    100%{
+
+@keyframes back {
+    100% {
         background-position: 2000px 0;
     }
 }
-.home-content p{
+
+.home-content p {
     font-size: var(--p-font);
     font-weight: 400;
     line-height: 30px;
     color: #fff;
     margin-bottom: 25px;
+    white-space: pre-line;
 }
-.home-content button{
+
+.home-content button {
     display: inline-block;
     padding: 10px 30px;
     background: var(--main-color);
@@ -226,40 +260,48 @@ section{
     letter-spacing: 1px;
     text-transform: uppercase;
 }
-.home-content button:hover{
+
+.home-content button:hover {
     transform: translateX(10px);
     border: 2px solid var(--text-color);
     background: transparent;
     color: var(--text-color);
 }
+
 /* Home section ends */
 
 /* Responsive code */
 
-@media(max-width: 1700px){
-    header{
+@media(max-width: 1700px) {
+    header {
         /* padding: 18px 8%; */
     }
 }
-@media(max-width: 1200px){
-    header{
+
+@media(max-width: 1200px) {
+    header {
         padding: 18px 8%;
     }
-    header.sticky{
+
+    header.sticky {
         padding: 18px 8%;
     }
-    .navbar a{
+
+    .navbar a {
         margin: 12px 20px;
     }
 }
-@media(max-width: 992px){
-    section{
+
+@media(max-width: 992px) {
+    section {
         padding: 18px 8%;
     }
-    #menu-icon{
+
+    #menu-icon {
         display: block;
     }
-    .navbar{
+
+    .navbar {
         position: absolute;
         width: 100%;
         height: 350px;
@@ -274,39 +316,57 @@ section{
         background: var(--bg-color);
         transition: all .50s ease;
     }
-    .navbar a{
+
+    .navbar a {
         display: block;
         padding: 0;
         margin: 0px 0px 20px 0px;
         font-size: 0.9375rem;
         font-weight: 400;
     }
-    .navbar.open{
+
+    .navbar.open {
         left: 0;
     }
 }
-@media(max-width: 767px){
-    .home-content h1{
+
+@media(max-width: 767px) {
+    .home-content h1 {
         font-size: 35px;
     }
-    .home-content h5{
+
+    .home-content h5 {
         font-size: 16px;
     }
-    .home-content p{
+
+    .home-content p {
         line-height: 25px;
+        white-space: normal;
     }
-    #menu-icon{
+
+    #menu-icon {
         font-size: 25px;
     }
-    .h-right a{
+
+    .h-right a {
         margin-right: 12px;
         margin-left: 0;
     }
-    .home-content button{
+
+    .home-content button {
         padding: 10px 20px;
         font-size: 15px;
     }
 }
-@media(max-width: 576px){
 
+@media(max-width: 576px) {
+    .home-content h1 {
+        /* font-size: 30px; */
+    }
+}
+
+@media(max-width: 576px) {
+    .home-content h1 {
+        font-size: 28px;
+    }
 }
