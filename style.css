@@ -359,12 +359,14 @@ section {
     font-size: 50px;
     color: var(--text-color);
     font-weight: 700;
+    /* text-transform: uppercase; */
 }
 
 .about-section .item .description p {
     font-size: 15px;
     color: #999;
     font-weight: 400;
+    margin-bottom: 0;
 }
 
 .about-section .item .description {
@@ -610,7 +612,7 @@ section {
 .appointment-section .item2 {
     position: relative;
     width: 100%;
-    padding: 25px;
+    padding: 60px 45px;
     border-radius: 8px;
     background: #101010;
     z-index: 1;
@@ -649,7 +651,7 @@ section {
     width: 15px;
 }
 
-.appointment-section span{
+.appointment-section span {
     font-size: 15px !important;
     color: #999;
     text-transform: none;
@@ -676,8 +678,9 @@ section {
     font-size: 15px;
     font-weight: 400;
     line-height: 24px;
-    border-top: 1px solid rgba(255,255,255,0.03);
+    border-top: 1px solid rgba(255, 255, 255, 0.03);
 }
+
 .appointment-section .menu li:hover {
     background: var(--main-color);
     color: #fff;
@@ -690,7 +693,8 @@ section {
 .appointment-section .menu.menu-open {
     display: block;
 }
-.appointment-section .appoint-btn{
+
+.appointment-section .appoint-btn {
     width: 100%;
     display: inline-block;
     padding: 10px 30px;
@@ -705,25 +709,176 @@ section {
     letter-spacing: 1px;
     margin-top: 1rem;
 }
+
 .appointment-section .appoint-btn:hover {
     transform: translateX(10px);
     border: 2px solid var(--text-color);
     background: transparent;
     color: var(--text-color);
 }
-.appointment-section .item1 h5{
+
+.appointment-section .item1 h5 {
     color: var(--main-color);
     font-size: 13px;
     text-transform: uppercase;
-}
-.appointment-section .item1 h1{
-    color: #fff;
-    font-size: 50px;
-}
-.appointment-section .item1 p{
-    color: #fff;
+    font-weight: 500;
+    letter-spacing: 5px;
 }
 
+.appointment-section .item1 h1 {
+    color: #fff;
+    font-size: 50px;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+    font-weight: 500;
+    line-height: 1.2em;
+}
+
+.appointment-section .item1 p {
+    color: #fff;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.75em;
+    font-family: "Open Sans", sans-serif;
+}
+
+.appointment-section .reservation-call,
+.reservation-mail {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 10px;
+}
+
+.appointment-section .reservation-call a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.appointment-section .reservation-mail a:hover {
+    color: var(--main-color);
+    text-decoration: underline;
+}
+.appointment-section .reservation-time p:hover {
+    color: var(--main-color);
+}
+
+.appointment-section .reservation-call i {
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.appointment-section .reservation-call a {
+    color: #f7f7f7;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+
+.appointment-section .reservation-mail i {
+    font-size: 22px;
+    color: var(--main-color);
+}
+
+.appointment-section .reservation-mail a {
+    color: #f7f7f7;
+    font-size: 18px;
+    font-weight: 400;
+    text-decoration: none;
+    font-family: "Open Sans", sans-serif;
+}
+.appointment-section .reservation-time p {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    font-size: 18px;
+}
+.appointment-section .reservation-time i {
+    font-size: 22px;
+    color: var(--main-color);
+    display: inline-block;
+    padding-right: 15px;
+}
+
+/* Portfolio css */
+
+.portfolio-section .insta-images{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 10px;
+    margin-top: 5rem;
+    margin-bottom: 2rem;
+    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+}
+.portfolio-section .insta-images img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.portfolio-section .insta-images > div{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    max-height: 349px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.portfolio-section .icon-overlay {
+    position: absolute;
+    color: #fff;
+    top: 0;
+    left: 0;
+    font-size: 50px;
+    background: rgba(134, 194, 50, 0.4);
+    opacity: 0;
+    transition: all 0.5s ease;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Add a flex display */
+    justify-content: center; /* Center horizontally */
+    align-items: center;
+}
+
+.portfolio-section .insta-images > div:hover .icon-overlay{
+    opacity: 1;
+}
+
+/* map section */
+.map-section{
+    background: #000;
+}
+.map-section iframe{
+    width: 100%;
+}
+
+/* footer */
+.footer .row{
+    flex-basis: 25%;
+    /* padding: 10px; */
+}
+.footer .logo{
+  width: 80px;
+  margin-bottom: 30px;
+}
+.footer-bottom{
+    position: relative;
+    display: block;
+    background-color: #101010;
+    padding: 32px 0;
+    border-top: 1px solid rgba(255, 255, 255, 0.05)
+}
+.footer-bottom p {
+    color: #999;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.75em;
+    text-align: center;
+}
+.footer-bottom span{
+    text-decoration: none;
+    text-transform: none;
+    font-size: 13px;
+}
 
 /* Scroll bar */
 ::-webkit-scrollbar {
