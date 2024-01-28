@@ -265,9 +265,9 @@ section {
     white-space: pre-line;
 }
 
-.home-content button {
+.home-content .button {
     display: inline-block;
-    padding: 10px 30px;
+    padding: 10px 20px;
     background: var(--main-color);
     color: var(--bg-color);
     font-size: 16px;
@@ -278,9 +278,10 @@ section {
     cursor: pointer;
     letter-spacing: 1px;
     text-transform: uppercase;
+    text-decoration: none;
 }
 
-.home-content button:hover {
+.home-content .button:hover {
     transform: translateX(10px);
     border: 2px solid var(--text-color);
     background: transparent;
@@ -306,6 +307,9 @@ section {
     /* gap: 1rem;
     padding: 1rem; */
     padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    margin-bottom: 2rem;
 }
 
 .about-section .container .items {
@@ -589,6 +593,9 @@ section {
     flex-direction: column;
     justify-content: flex-end;
     padding-top: 20px;
+    padding-left: 0;
+    padding-right: 0;
+    padding-bottom: 20px;
 }
 
 .appointment-section .column {
@@ -612,7 +619,7 @@ section {
 .appointment-section .item2 {
     position: relative;
     width: 100%;
-    padding: 60px 45px;
+    padding: 50px 35px;
     border-radius: 8px;
     background: #101010;
     z-index: 1;
@@ -754,10 +761,12 @@ section {
     color: var(--main-color);
     text-decoration: underline;
 }
+
 .appointment-section .reservation-mail a:hover {
     color: var(--main-color);
     text-decoration: underline;
 }
+
 .appointment-section .reservation-time p:hover {
     color: var(--main-color);
 }
@@ -787,12 +796,14 @@ section {
     text-decoration: none;
     font-family: "Open Sans", sans-serif;
 }
+
 .appointment-section .reservation-time p {
     display: flex;
     align-items: center;
     margin-top: 10px;
     font-size: 18px;
 }
+
 .appointment-section .reservation-time i {
     font-size: 22px;
     color: var(--main-color);
@@ -802,27 +813,39 @@ section {
 
 /* Portfolio css */
 
-.portfolio-section .insta-images{
+.portfolio-section .insta-images {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* grid-template-columns: repeat(4, 1fr); */
+    /* display: flex;
+    flex-wrap: wrap;
+    flex-direction: row; */
     gap: 10px;
     margin-top: 5rem;
     margin-bottom: 2rem;
-    /* grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); */
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
 }
-.portfolio-section .insta-images img{
+
+.portfolio-section .insta-images img {
     width: 100%;
     height: 100%;
     object-fit: cover;
 }
-.portfolio-section .insta-images > div{
+
+.portfolio-section .insta-images>div {
     position: relative;
-    width: 100%;
-    height: 100%;
+    /* width: 100%;
+    height: 100%; */
+    /* padding-top: 20px; */
     max-height: 349px;
     overflow: hidden;
     cursor: pointer;
 }
+
+.portfolio-section .icon-overlay a {
+    color: #fff;
+    text-decoration: none;
+}
+
 .portfolio-section .icon-overlay {
     position: absolute;
     color: #fff;
@@ -834,47 +857,156 @@ section {
     transition: all 0.5s ease;
     width: 100%;
     height: 100%;
-    display: flex; /* Add a flex display */
-    justify-content: center; /* Center horizontally */
+    display: flex;
+    /* Add a flex display */
+    justify-content: center;
+    /* Center horizontally */
     align-items: center;
 }
 
-.portfolio-section .insta-images > div:hover .icon-overlay{
+.portfolio-section .insta-images>div:hover .icon-overlay {
     opacity: 1;
 }
 
 /* map section */
-.map-section{
+.map-section {
     background: #000;
 }
-.map-section iframe{
+
+.map-section iframe {
     width: 100%;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
 }
 
 /* footer */
-.footer .row{
+.footer .row {
     flex-basis: 25%;
+    gap: 40px;
     /* padding: 10px; */
 }
-.footer .logo{
-  width: 80px;
-  margin-bottom: 30px;
+
+.footer .logo {
+    width: 80px;
+    margin-bottom: 15px;
 }
-.footer-bottom{
+
+.footer .row p {
+    color: #999;
+    font-family: "Open Sans", sans-serif;
+    font-size: 15px;
+    line-height: 1.75em;
+    font-weight: 400;
+}
+
+.footer .row p strong {
+    color: #fff;
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer .row .footer-title {
+    color: #fff;
+    font-size: 27px;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    margin-bottom: 15px;
+    font-weight: 400;
+}
+
+.footer .footer-phone-no a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+.footer .footer-phone-no {
+    margin-bottom: 0;
+}
+
+.footer .footer-mail-id {
+    margin-bottom: 0;
+}
+
+.footer .footer-mail-id a {
+    font-size: 15px;
+    line-height: 2em;
+    transition: all 500ms ease;
+    color: #999;
+    font-family: "Open Sans", sans-serif;
+    text-decoration: none;
+}
+
+/* .footer .footer-mail-id a:before {
+    position: absolute;
+    bottom: 9px;
+    left: 0;
+    right: 0;
+    height: 1px;
+    background-color: var(--main-color);
+    content: "";
+    transition: all 500ms ease;
+} */
+/* .footer .row .underline{
+    width: 100%;
+    height: 5px;
+    background: #767676;
+    border-radius: 3px;
+    position: absolute;
+    top: 25px;
+    left: 0;
+}
+.footer .row .underline span{
+    width: 15px;
+    height: 100%;
+    background: #fff;
+    border-radius: 3px;
+    position: absolute;
+    top: 0;
+    left: 10px;
+    animation: moving 2s linear infinite;
+} */
+.footer .row table {
+    border: none;
+    border-bottom-width: 0;
+}
+
+.footer .row table th,
+td {
+    color: #999;
+    font-size: 15px;
+    line-height: 1.7em;
+    font-weight: 400;
+    border-bottom-width: 0;
+    font-family: "Open Sans", sans-serif;
+}
+
+.footer .row table th:first-child {
+    padding-left: 0;
+}
+
+.footer .row table tbody td {
+    border-bottom-width: 0;
+}
+
+/* footer buttom */
+.footer-bottom {
     position: relative;
     display: block;
     background-color: #101010;
     padding: 32px 0;
     border-top: 1px solid rgba(255, 255, 255, 0.05)
 }
+
 .footer-bottom p {
     color: #999;
     font-size: 13px;
     font-weight: 400;
     line-height: 1.75em;
     text-align: center;
+    margin-bottom: 0;
 }
-.footer-bottom span{
+
+.footer-bottom span {
     text-decoration: none;
     text-transform: none;
     font-size: 13px;
@@ -955,6 +1087,16 @@ section {
         font-size: 40px;
         font-weight: 700;
     }
+
+    /* appointment section */
+    .appointment-section .item2 {
+        padding: 50px 35px;
+    }
+
+    .appointment-section .item1 h1 {
+        font-size: 45px;
+    }
+
 }
 
 @media(max-width: 992px) {
@@ -993,6 +1135,28 @@ section {
     .navbar.open {
         left: 0;
     }
+
+    /* footer */
+    .footer {
+        bottom: unset;
+    }
+
+    .footer .row {
+        gap: 5px;
+    }
+
+    /* appointment section */
+    .appointment-section .column {
+        flex-wrap: wrap;
+    }
+
+    .appointment-section .container .items {
+        gap: 3rem;
+    }
+
+    .appointment-section .item2 {
+        padding: 35px 35px;
+    }
 }
 
 @media(max-width: 767px) {
@@ -1027,16 +1191,93 @@ section {
     .about-section .container .items {
         gap: 2rem;
     }
+
+    /* service section */
+    .service-content {
+        margin-top: 3rem;
+    }
+
+    /* footer */
+    .footer .col {
+        flex-basis: 100%;
+    }
+
+    /* service and portfolio heading */
+
+    .center-text h1 {
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    .center-text span {
+        font-size: 42px;
+        font-weight: 700;
+    }
+
+    /* service section */
+    .service-content .box .card-data {
+        width: 240px;
+        padding: 1.2rem 1.6rem;
+    }
+
+    /* portfolio section */
+    .appointment-section .item1 h1 {
+        font-size: 45px;
+    }
+
+    .portfolio-section .insta-images {
+        margin-top: 3rem;
+    }
+
+    /* map section */
 }
 
-@media(max-width: 576px) {
-    .home-content h1 {
-        /* font-size: 30px; */
+@media(max-width: 652px) {
+
+    /* service section */
+    .service-content .box .card-data {
+        width: 90%;
+        padding: 1.2rem 1.6rem;
     }
 }
 
 @media(max-width: 576px) {
+    /* home section */
+    .home-section{
+        padding: 18px 2%;
+    }
     .home-content h1 {
-        font-size: 30px;
+        font-size: 35px;
+    }
+    .home-section .home-content{
+        text-align: center;
+    }
+
+    /* portfolio section */
+    .appointment-section .reservation-call a {
+        font-size: 16px;
+    }
+
+    .appointment-section .reservation-mail a {
+        font-size: 16px;
+    }
+
+    .appointment-section .reservation-time p {
+        font-size: 16px;
+    }
+
+    /* about section */
+    .about-section .about-img {
+        padding: 1.5rem;
+    }
+
+    /* service section */
+    .service-content .box {
+        max-height: 242px;
+    }
+
+    /* appointment section */
+    .appointment-section .item2 {
+        padding: 25px 25px;
     }
 }
