@@ -108,3 +108,53 @@ var loader = document.getElementById("preloader");
 window.addEventListener("load", function () {
     loader.style.display = "none";
 })
+
+// scroll to navbar
+
+const scrollRevealOPtion = {
+    distance: "50px",
+    charAtorigin: "bottom",
+    duration: 1000,
+};
+const scroll = ScrollReveal({
+    distance: "100px",
+    interval: 2500,
+    // reset: true,
+});
+
+// header container
+ScrollReveal().reveal(".home-content h5", scrollRevealOPtion)
+
+ScrollReveal().reveal(".home-content h1", {
+    ...scrollRevealOPtion,
+    delay: 500,
+});
+ScrollReveal().reveal(".home-content p", {
+    ...scrollRevealOPtion,
+    delay: 1000,
+});
+ScrollReveal().reveal(".home-content .button", {
+    ...scrollRevealOPtion,
+    delay: 1500,
+});
+ScrollReveal().reveal(".service-section .box ", {
+    ...scrollRevealOPtion,
+    interval: 500,
+});
+
+scroll.reveal(".about-section .item .about-img", {
+    origin: "left",
+    interval: 150,
+});
+scroll.reveal(".about-section .item .heading, .about-section .item .description, .about-section .item .about-btn", {
+    origin: "right",
+    interval: 150,
+});
+scroll.reveal(".appointment-section .item1", {
+    origin: "left",
+    interval: 150,
+});
+scroll.reveal(".appointment-section .item2", {
+    origin: "right",
+    interval: 150,
+});
