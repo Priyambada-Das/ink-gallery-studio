@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/css/bootstrap-datepicker.min.css    ">
     <link rel="stylesheet" href="https://unpkg.com/boxicons@latest/css/boxicons.min.css">
     <link href="https://cdn.jsdelivr.net/npm/remixicon@4.1.0/fonts/remixicon.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,9 +19,17 @@
         rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Tattoo Website</title>
-</head>
+    <link rel="icon" href="/assets/images/logo.jpg" type="image/x-icon">
 
 <body>
+    <!-- preloader -->
+    <div id="preloader"></div>
+
+    <!-- progress bar -->
+    <div id="progress">
+        <span id="progress-value">&#x1F815;</span>
+    </div>
+
     <!-- header -->
     <header>
         <a href="#" class="logo">
@@ -48,6 +58,8 @@
             <div class="bx bx-menu" id="menu-icon"></div>
         </div>
     </header>
+
+    <!-- main content starts -->
     <main>
         <!-- home section -->
         <section class="home-section">
@@ -56,7 +68,8 @@
                 <h1>The Blacksmith Studio</h1>
                 <!-- <h6>Where Art Meets Skin</h6> -->
                 <p>Experience the fusion of creativity and craftsmanship. As a dedicated tattoo artist,I specialize in
-                    bringing your ideas to life,creating tattoos that are not just ink on skin but stories etched in ink.</p>
+                    bringing your ideas to life,creating tattoos that are not just ink on skin but stories etched in
+                    ink.</p>
                 <!-- <p>Explore my portfolio and discover the artistry behind each piece. Let's collaborate to design a
                     tattoo that's as unique as you are.</p>
                 <a href="#portfolio" class="cta-button">View Portfolio</a> -->
@@ -166,9 +179,13 @@
                                     </div>
                                 </div>
                                 <div class="column">
-                                    <div data-date-format="dd-mm-yyyy" class="input-append date myDatepicker input-box">
-                                        <input type="text" placeholder="Date" value="" size="16" class="date-class">
-                                        <span class="add-on"> <i class="date-icon bi bi-calendar2"></i></span>
+                                    <div class="input-box">
+                                        <div>
+                                            <div data-date-format="dd-mm-yyyy" class="input-append date myDatepicker">
+                                                <input type="text" placeholder="dd-mm-yyyy" value="" class="">
+                                                <span class="add-on"> <i class='bx bxs-calendar'></i></span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="dropdown input-box">
                                         <div class="select">
@@ -180,12 +197,14 @@
                                                     fill="#999" />
                                             </svg>
                                         </div>
-                                        <ul class="menu">
-                                            <li class="active">Attempt 08</li>
-                                            <li>Attempt 09</li>
-                                            <li>Attempt 10</li>
-                                            <li>Attempt 11</li>
-                                            <li>Attempt 12</li>
+                                        <ul class="menu menu-time">
+                                            <li class="active">10:00 AM</li>
+                                            <li>11:00 AM</li>
+                                            <li>12:00 PM</li>
+                                            <li>14:00 PM</li>
+                                            <li>16:00 PM</li>
+                                            <li>18:00 PM</li>
+                                            <li>20:00 PM</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -200,12 +219,10 @@
                                                     fill="#999" />
                                             </svg>
                                         </div>
-                                        <ul class="menu">
-                                            <li class="active">Attempt 08</li>
-                                            <li>Attempt 09</li>
-                                            <li>Attempt 10</li>
-                                            <li>Attempt 11</li>
-                                            <li>Attempt 12</li>
+                                        <ul class="menu menu-services">
+                                            <li class="active">Tattooing</li>
+                                            <li>Piercing</li>
+                                            <li>Tattoo CoverUps</li>
                                         </ul>
                                     </div>
                                     <div class="dropdown input-box">
@@ -218,12 +235,12 @@
                                                     fill="#999" />
                                             </svg>
                                         </div>
-                                        <ul class="menu">
-                                            <li class="active">Attempt 08</li>
-                                            <li>Attempt 09</li>
-                                            <li>Attempt 10</li>
-                                            <li>Attempt 11</li>
-                                            <li>Attempt 12</li>
+                                        <ul class="menu menu-artist">
+                                            <li class="active">Vivek</li>
+                                            <li>Priya</li>
+                                            <li>Amitha</li>
+                                            <li>Pratik</li>
+                                            <li>vikash</li>
                                         </ul>
                                     </div>
                                 </div>
@@ -317,90 +334,94 @@
                 referrerpolicy="no-referrer-when-downgrade"></iframe>
         </section>
 
-        <!-- footer -->
-        <div>
-            <section class="footer">
-                <div class="row">
-                    <div class="col">
-                        <img src="/assets/images/logo.jpg" alt="" class="logo">
-                        <p>At The Blacksmith Studio, we forge more than just metal; we forge experiences, stories, and
-                            lasting impressions. As artisans of ink, we specialize in transforming ideas into timeless
-                            tattoos that speak volumes about your journey, passions, and individuality.</p>
-                    </div>
-                    <div class="col">
-                        <h3 class="footer-title">work time</h3>
-                        <table class="table">
-                            <thead>
-                                <tr>
-                                    <th scope="col">Monday</th>
-                                    <th scope="col">10:30 - 22:30</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr>
-                                    <th scope="row">Tuesday</th>
-                                    <td>10:30 - 22:30</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Wednesday</th>
-                                    <td>10:30 - 22:30</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Thursday</th>
-                                    <td colspan="2">10:30 - 22:30</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Friday</th>
-                                    <td colspan="2">10:30 - 22:30</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Saturday</th>
-                                    <td colspan="2">10:30 - 22:30</td>
-                                </tr>
-                                <tr>
-                                    <th scope="row">Sunday</th>
-                                    <td colspan="2">10:30 - 22:30</td>
-                                </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <div class="col">
-                        <h3 class="footer-title">Address <div class="underline"><span></span></div>
-                        </h3>
-                        <p> <strong>Location :</strong> <br>Twin Citywalk, Sector-1, Bisrakh Jalalpur, Uttar Pradesh</p>
-                        <div class="footer-contact-info">
-                            <p class="footer-phone-no">
-                                <a href="tel:+919773913349">+919773913349</a>
-                            </p>
-                            <p class="footer-mail-id">
-                                <a href="mailto:reshu.shraff@gmail.com">reshu.shraff@gmail.com</a>
-                            </p>
-                        </div>
+    </main>
+    <!-- main content ends -->
+
+    <!-- footer -->
+    <div>
+        <section class="footer">
+            <div class="row">
+                <div class="col">
+                    <img src="/assets/images/logo.jpg" alt="" class="logo">
+                    <p>At The Blacksmith Studio, we forge more than just metal; we forge experiences, stories, and
+                        lasting impressions. <br>As artisans of ink, we specialize in transforming ideas into
+                        timeless
+                        tattoos that speak volumes about your journey, passions, and individuality.</p>
+                </div>
+                <div class="col">
+                    <h3 class="footer-title">work time</h3>
+                    <table class="table">
+                        <thead>
+                            <tr>
+                                <th scope="col">Monday</th>
+                                <th scope="col">10:30 - 22:30</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <th scope="row">Tuesday</th>
+                                <td>10:30 - 22:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Wednesday</th>
+                                <td>10:30 - 22:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Thursday</th>
+                                <td colspan="2">10:30 - 22:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Friday</th>
+                                <td colspan="2">10:30 - 22:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Saturday</th>
+                                <td colspan="2">10:30 - 22:30</td>
+                            </tr>
+                            <tr>
+                                <th scope="row">Sunday</th>
+                                <td colspan="2">10:30 - 22:30</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col">
+                    <h3 class="footer-title">Address <div class="underline"><span></span></div>
+                    </h3>
+                    <p> <strong>Location :</strong> <br>Twin Citywalk, Sector-1, Bisrakh Jalalpur, Uttar Pradesh</p>
+                    <div class="footer-contact-info">
+                        <p class="footer-phone-no">
+                            <a href="tel:+919773913349">+919773913349</a>
+                        </p>
+                        <p class="footer-mail-id">
+                            <a href="mailto:reshu.shraff@gmail.com">reshu.shraff@gmail.com</a>
+                        </p>
                     </div>
                 </div>
-            </section>
-            <div class="footer-bottom">
-                <div class="container">
-                    <div class="row">
-                        <div class="col-md-12 text-center">
-                            <div class="footer-bottom-inner">
-                                <p class="footer-buttom-copyright">
-                                    The Blacksmith Tattoo Studio 2024 © All rights reserved. Designed & Developed by
-                                    <span>Priyambada Das</span>
-                                </p>
-                            </div>
+            </div>
+        </section>
+        
+        <!-- footer bottom -->
+        <div class="footer-bottom">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12 text-center">
+                        <div class="footer-bottom-inner">
+                            <p class="footer-buttom-copyright">
+                                The Blacksmith Tattoo Studio 2024 © All rights reserved. Designed & Developed by
+                                <span>Priyambada Das</span>
+                            </p>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-
-    </main>
+    </div>
 
     <!-- Scroll up -->
-    <a href="" class="scroll-up" id="scroll-up">
-        <i class="ri-arrow-up-line"></i>
-    </a>
+    <!-- <a href="" class="scroll-up" id="scroll-up">
+        <i class="ri-arrow-up-line scroll-up-value"></i>
+    </a> -->
 
     <!-- Bootstrap js -->
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
@@ -412,37 +433,10 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js"
         integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
         crossorigin="anonymous"></script>
+    <script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-datepicker/1.9.0/js/bootstrap-datepicker.min.js"></script>
+
     <script src="assets/Js/script.js"></script>
-
-    <script>
-        const assesmentdropdowns = document.querySelectorAll('.dropdown');
-
-        assesmentdropdowns.forEach(dropdown => {
-            const select = dropdown.querySelector('.select');
-            const menu = dropdown.querySelector('.menu');
-            const svg = dropdown.querySelector('.svg-img');
-            const options = dropdown.querySelectorAll('.menu li');
-            const selected = dropdown.querySelector('.selected');
-
-            select.addEventListener('click', () => {
-                menu.classList.toggle('menu-open');
-                svg.classList.toggle('svg-img-rotate');
-            });
-            options.forEach(option => {
-                option.addEventListener('click', () => {
-                    selected.innerText = option.innerText;
-                    menu.classList.remove('menu-open');
-                    svg.classList.remove('svg-img-rotate');
-
-                    options.forEach(option => {
-                        option.classList.remove('active');
-                    });
-                    option.classList.add('active');
-                });
-            });
-        });
-    </script>
-
 
 </body>
 

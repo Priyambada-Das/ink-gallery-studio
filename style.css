@@ -206,6 +206,7 @@ section {
     display: flex;
     align-items: flex-end;
     justify-content: flex-start;
+    background-attachment: fixed;
 }
 
 .home-content {
@@ -664,7 +665,53 @@ section {
     text-transform: none;
     font-weight: normal;
     letter-spacing: normal;
+    font-family: "Oswald", sans-serif;
 }
+
+/* Date picker */
+
+.appointment-section .myDatepicker .add-on {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    transform: translate(-10%, -10%);
+    pointer-events: all;
+    cursor: pointer;
+}
+
+.datepicker table tr td.active.active {
+    color: #fff;
+    background-color: var(--main-color);
+    background-image: none;
+    padding: 4px 6px;
+}
+
+.datepicker {
+    padding: 10px;
+    background: #000;
+    color: #fff;
+}
+
+.datepicker td,
+.datepicker th {
+    padding: 2px 6px;
+}
+
+.datepicker .datepicker-switch {
+    background: var(--main-color);
+}
+
+.datepicker-dropdown.datepicker-orient-top:after {
+    border-top: 6px solid #000;
+    /* border: none; */
+}
+
+.datepicker-dropdown.datepicker-orient-top:before {
+    border-top: 6px solid #000;
+    /* border: none; */
+}
+
+/* date picker ends */
 
 .appointment-section .menu {
     list-style: none;
@@ -674,7 +721,6 @@ section {
     position: absolute;
     width: 100%;
     display: none;
-    z-index: 1000;
     transition: 0.2s;
 }
 
@@ -701,10 +747,22 @@ section {
     display: block;
 }
 
+.appointment-section .menu-time {
+    z-index: 1000;
+}
+
+.appointment-section .menu-services {
+    z-index: 999;
+}
+
+.appointment-section .menu-artist {
+    z-index: 99;
+}
+
 .appointment-section .appoint-btn {
     width: 100%;
     display: inline-block;
-    padding: 10px 30px;
+    padding: 15px 30px;
     background: var(--main-color);
     color: var(--bg-color);
     font-size: 15px;
@@ -809,6 +867,11 @@ section {
     color: var(--main-color);
     display: inline-block;
     padding-right: 15px;
+}
+
+.appointment-section .dropdown,
+.myDatepicker {
+    cursor: pointer;
 }
 
 /* Portfolio css */
@@ -1029,12 +1092,12 @@ td {
 }
 
 /* scroll up */
-.scroll-up {
+/* .scroll-up {
     position: fixed;
     right: 1rem;
     bottom: 3rem;
-    /* bottom: -50% */
     background-color: hsla(0, 0%, 100%, .1);
+    border-radius: 50%;
     padding: 6px;
     display: inline-flex;
     color: var(--text-color);
@@ -1043,14 +1106,46 @@ td {
     --webkit-backdrop-filter: blur(24px);
     z-index: 1000;
     transition: bottom .4s, transform .4s;
+    text-decoration: none;
+} */
+
+#progress{
+    position: fixed;
+    bottom: 20px;
+    right: 10px;
+    width: 50px;
+    height: 50px;
+    display: grid;
+    place-items: center;
+    border-radius: 50%;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    z-index: 100;
+}
+#progress-value{
+    display: block;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+    background-color: #101010;
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 1.25rem;
+    color: var(--main-color);
 }
 
-.scroll-up:hover {
+.progress:hover {
     transform: translateY(-.25rem);
 }
 
-.show-scroll {
-    bottom: 3rem;
+/* preloader */
+#preloader{
+    background: #000 url(/assets/images/preloader.gif) no-repeat center center;
+    background-size: 15%;
+    height: 100vh;
+    width: 100%;
+    position: fixed;
+    z-index: 100;
 }
 
 /* Responsive code */
@@ -1242,14 +1337,17 @@ td {
 }
 
 @media(max-width: 576px) {
+
     /* home section */
-    .home-section{
+    .home-section {
         padding: 18px 2%;
     }
+
     .home-content h1 {
         font-size: 32px;
     }
-    .home-section .home-content{
+
+    .home-section .home-content {
         text-align: center;
     }
 
