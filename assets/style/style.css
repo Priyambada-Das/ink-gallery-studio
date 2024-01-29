@@ -1329,6 +1329,9 @@ td {
 
     /* appointment section */
     .appointment-section .item2 {
-        padding: 25px 25px;
+        padding: 20px 15px;
+    }
+    .appointment-section form .input-box:first-child{
+        /* margin-top: 0; */
     }
 }
