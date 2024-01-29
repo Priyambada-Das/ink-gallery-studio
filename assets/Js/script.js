@@ -151,10 +151,10 @@ scroll.reveal(".about-section .item .heading, .about-section .item .description,
     interval: 150,
 });
 scroll.reveal(".appointment-section .item1", {
-    origin: "left",
-    interval: 150,
+    origin: "bottom",
+    interval: 250,
 });
 scroll.reveal(".appointment-section .item2", {
-    origin: "right",
-    interval: 150,
+    origin: "top",
+    interval: 250,
 });
